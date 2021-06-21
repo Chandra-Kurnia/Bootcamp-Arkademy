@@ -11,14 +11,14 @@ const kalimat = 'javascript diciptakan oleh Brendan Eich'
 
 //1. sort
 console.log('Built in function SORT :');
-console.log(angka.sort(function(a, b){ return a - b}));
+console.log(angka.sort(function(a, b){ return a - b})); //mengurutkan array angka
 console.log(huruf.sort());
 
 
 
 //2. map
 console.log('\n\nBuilt in function MAP :');
-// const newAngka = angka.map(function(items){ //normal anonymus function
+// const newAngka = angka.map(function(items){ //normal anonymous function
 //     return items * 5;
 // });
 const newAngka = angka.map(a => a * 5) //arrow function
@@ -28,7 +28,7 @@ console.log(newAngka);
 
 //3. filter
 console.log('\n\nBuilt in function FILTER :');
-// const fiterAngka = angka.filter(function (a) {  //normal anonymus function
+// const fiterAngka = angka.filter(function (a) {  //normal anonymous function
 //     return a >= 5;
 //  }) 
 const filterAngka = angka.filter(a => a >= 5); //arrow function
@@ -43,14 +43,14 @@ console.log(hewan);
 
 
 
-//5. unshift
+//5. unshift --------
 console.log('\n\nBuilt in function UNSHIFT :');
-hewan.unshift('Badak'); //masukan string 'badak' ke array hewan diawal array
+console.log(hewan.unshift('Badak')); //masukan string 'badak' ke array hewan diawal array
 console.log(hewan);
 
 
 
-//6. pop
+//6. pop ---------------
 console.log('\n\nBuilt in function POP :');
 const hewanTerakhir = hewan.pop();//menghilangkan / menghapus elemen array terakhir
 console.log(hewanTerakhir); //menampilkan elemen array yang dihapus dengan pop

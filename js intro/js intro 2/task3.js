@@ -4,7 +4,7 @@ const arr = [1,2,3,5,7,9,10,14,17,19,20,27];
 
 
 function validate(nilaiAwal, nilaiAkhir, array, callback){
-    if(nilaiAwal === '' | isNaN(nilaiAwal) | nilaiAwal<0 | nilaiAkhir === '' | isNaN(nilaiAkhir) | nilaiAkhir<0 | array.length < 5){
+    if(nilaiAwal === '' | isNaN(nilaiAwal) | nilaiAkhir === '' | isNaN(nilaiAkhir) | array.length < 5){
         console.log('Data yang anda masukan salah');
     }else{
         callback(nilaiAwal, nilaiAkhir, array);
@@ -12,7 +12,7 @@ function validate(nilaiAwal, nilaiAkhir, array, callback){
 }
 
 function seleksi(awal, akhir, array) { 
-    if(awal > akhir){
+    if(awal >= akhir){
         console.log('Nilai awal harus lebih kecil dari nilai akhir.');
     }else{
         const output = array.filter(a => a>awal && a<akhir);
@@ -24,4 +24,4 @@ function seleksi(awal, akhir, array) {
     }
  }
 
-validate(5, 14, arr, seleksi)
+validate(3, 14, arr, seleksi) //panggil data awal dan akhir, lalu berikan callback seleksi()
