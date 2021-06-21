@@ -58,11 +58,11 @@ function calculate(harga, voucher, jarak, pajak) {
   subtotal = harga - diskon + ongkir + pajak;
 
   bayar = harga - diskon;
-  console.log("Harga : " + harga);
-  console.log("Diskon : " + diskon);
-  console.log("Biaya Antar :" + ongkir);
-  console.log("Pajak :" + pajak);
-  console.log("Subtotal : "+ subtotal);
+  console.log("Harga : Rp. " + harga+',00');
+  console.log("Diskon : Rp. " + diskon+',00');
+  console.log("Biaya Antar : Rp. " + ongkir+',00');
+  console.log("Pajak : Rp. " + pajak+',00');
+  console.log("Subtotal : Rp. "+ subtotal+',00');
 }
 
 arkaFood(harga, voucher, jarak, pajak, calculate);
