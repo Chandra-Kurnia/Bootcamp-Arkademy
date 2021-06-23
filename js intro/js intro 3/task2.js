@@ -1,32 +1,38 @@
-const getmonth = (callback) => {
-  setTimeout(() => {
-    let error = true;
-    let month = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "Juni",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "Desember",
-    ];
-    if (!error) {
-      callback(null, month);
-    } else {
-      callback(new Error("sorry Data Not Found", []));
-    }
-  },2000);
+const getmonth = callback => {
+  return Promise((resolve, reject) => {
+    setTimeout(() => {
+      let error = false;
+      let month = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "Juni",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "Desember",
+      ];
+      if (!error) {
+        resolve(month);
+      } else {
+        // callback(new Error("sorry Data Not Found", []));
+        reject("Error")
+      }
+    },2000);
+  })
 };
 
-getmonth((status, array) => {
-  if (status == null) {
-    array.map((data) => console.log(data));
-  }else{
-    console.log(status);
-  }
-});
+
+getmonth()
+.then()
+// getmonth((res, array) => {
+//   if (res == null) {
+//     array.map(data => console.log(data))
+//   }else{
+//     console.log(res);
+//   }
+// });

@@ -1,0 +1,20 @@
+const number = 1324023410321465
+const string = number.toString()
+const arr = string.split('0')
+
+
+const result = arr.map(element => element.split('')).map(item => item.sort()).join().replace(/,/g,'')
+console.log(typeof result);
+const res = parseInt(result)
+console.log(typeof res);
+
+1. Start
+2. Ubah number menjadi string
+3. Pisahkan string dan jadikan array baru menggunakan split dengan separator 0
+4.Untuk setiap elemen string jadikan array baru dengan menggunakan split
+5. Untuk setiap elemen array baru urutkan dengan menggunakan sort
+5. Gabungkan semua elemen array dengan menggunakan join
+6. Hapus semua koma, dengan menggunakan replace
+7. Ubah tipe data result menjadi number
+8. Tampilkan result
+9. End
