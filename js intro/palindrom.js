@@ -19,4 +19,4 @@ palindrom = (input) => {
         console.log('Tidak ada kata');
     }
 }
-palindrom('kasur rusak');
+palindrom('malam ka');

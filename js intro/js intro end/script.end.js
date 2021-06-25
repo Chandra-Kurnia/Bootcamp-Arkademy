@@ -15,10 +15,11 @@ const sorter = (number) => {
       const result = arr
           .map((element) => element.split(""))
           .map((item) => item.sort())
-          .join()
+          .join('')
           .replace(/,/g, "");
         const res = parseInt(result);
         console.log(res);
+        // console.log(result);
     } else {
       console.log("System Error");
     }
